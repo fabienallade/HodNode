@@ -2,7 +2,7 @@ const config = require('config');
 const _ = require('lodash');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const Joi = require('Joi');
+const Joi = require('joi');
 const {
   User
 } = require('../models/user');
