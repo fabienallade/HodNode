@@ -19,7 +19,7 @@ if (!config.get('jwtPrivateKey')) {
 const app = express();
 app.use(morgan('tiny'));
 const db = config.get('db');
-if (!config.get('db')) {
+if (config.get('db')) {
   console.log("erreur sur les chose");
   console.log(config.get('db'));
 }
