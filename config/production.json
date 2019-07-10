@@ -1,6 +1,8 @@
 {
-    "name": "My express app Production",
-    "mail": {
-        "host": "prod-mail-server"
-    }
+  "name": "My express app Production",
+  "mail": {
+    "host": "prod-mail-server"
+  },
+  "jwtPrivateKey": "",
+  "db": ""
 }
