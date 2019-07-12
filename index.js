@@ -22,11 +22,10 @@ const app = express();
 app.use(morgan('tiny'));
 const db = config.get('db');
 const options = {
-  native_parser: true,
-  auto_reconnect: false,
-  poolSize: 10,
-  connectWithNoPrimary: true,
-  sslValidate: false
+  ssl: true,
+  sslValidate: true,
+  poolSize: 1,
+  reconnectTries: 1,
 }
 mongoose.connect(db, options)
   .then(() => console.log('Connected to MongoDB...'))
