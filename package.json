@@ -17,14 +17,21 @@
     "bcrypt": "^1.0.3",
     "compression": "^1.7.4",
     "config": "^3.0.1",
+    "ejs": "^2.6.2",
     "express": "^4.16.2",
+    "express-fileupload": "^1.1.5",
     "fawn": "^2.1.5",
     "joi": "^13.7.0",
     "joi-objectid": "^2.0.0",
     "joi-password-complexity": "^2.0.1",
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11",
+    "mongodb": "^3.2.7",
     "mongoose": "^5.0.2",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "pug": "^2.0.4",
+    "req-flash": "0.0.3",
+    "sequelize": "^5.10.0"
   }
 }
