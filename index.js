@@ -22,7 +22,10 @@ const app = express();
 app.use(morgan('tiny'));
 const db = config.get('db');
 console.log(db);
-mongoose.connect(db)
+mongoose.connect(
+    "mongodb://fabien:fabien@vidly-shard-00-00-alf7h.mongodb.net:27017,vidly-shard-00-01-alf7h.mongodb.net:27017,vidly-shard-00-02-alf7h.mongodb.net:27017/vidly?ssl=true&replicaSet=Vidly-shard-0&authSource=admin&retryWrites=true&w=majority", {
+      useNewUrlParser: true
+    })
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...'));
 
