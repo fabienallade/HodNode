@@ -21,9 +21,8 @@ if (!config.get('jwtPrivateKey')) {
 const app = express();
 app.use(morgan('tiny'));
 const db = config.get('db');
-mongoose.connect(db, {
-    useNewUrlParser: true
-  })
+console.log(db);
+mongoose.connect(db)
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...'));
 
