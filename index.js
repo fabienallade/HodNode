@@ -21,7 +21,21 @@ if (!config.get('jwtPrivateKey')) {
 const app = express();
 app.use(morgan('tiny'));
 const db = config.get('db');
-mongoose.connect(db)
+const mongo_options = {
+  ssl: true,
+  sslValidate: true,
+  poolSize: 5,
+  reconnectTries: 1,
+  socketOptions: {
+    keepAlive: 1,
+    connectTimeoutMS: 30000
+  },
+  auto_reconnect: true,
+}
+mongoose.connect(db, {
+    mongos: mongo_options,
+    db: mongo_options
+  })
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...' + err));
 
