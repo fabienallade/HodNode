@@ -23,7 +23,7 @@ app.use(morgan('tiny'));
 const db = config.get('db');
 mongoose.connect(db)
   .then(() => console.log('Connected to MongoDB...'))
-  .catch(err => console.error('Could not connect to MongoDB...'));
+  .catch(err => console.error('Could not connect to MongoDB...' + err));
 
 app.use(express.json());
 app.use(function(req, res, next) {
