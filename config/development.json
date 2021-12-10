@@ -3,5 +3,5 @@
   "mail": {
     "host": "dev-mail-server"
   },
-  "db": "mongodb://fabien:fabien@vidly-shard-00-00-alf7h.mongodb.net:27017,vidly-shard-00-01-alf7h.mongodb.net:27017,vidly-shard-00-02-alf7h.mongodb.net:27017/vidly?ssl=true&replicaSet=Vidly-shard-0&authSource=admin&retryWrites=true&w=majority"
+  "db": ""
 }
